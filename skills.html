@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Skills</title>
-
+    <title>My Skills & Projects</title>
     <style>
         body {
             margin: 0;
@@ -12,16 +11,18 @@
             background: #f2f4f8;
         }
 
-        .skills-section {
+        .container {
             max-width: 700px;
             margin: 50px auto;
             padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        
+        h1, h2 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
         .skills-section, .project-section {
             background: #fff;
             border-radius: 8px;
@@ -30,13 +31,7 @@
             margin-bottom: 30px;
         }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #222;
-        }
-
-        .skill {
+        .skill, .project-link {
             background: #f7f7f7;
             padding: 12px 15px;
             margin: 10px 0;
@@ -45,32 +40,63 @@
             font-size: 1rem;
             color: #444;
         }
+
+        .skill:hover, .project-link:hover {
+            background: #fffae6;
+            border-left-color: #ff6600;
+            transform: translateX(5px);
+            transition: all 0.3s ease;
+        }
+
+        .project-link a {
+            text-decoration: none;
+            color: #ff9900;
+            font-weight: 500;
+        }
+
+        .project-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+            h1, h2 {
+                font-size: 1.5rem;
+            }
+            .skill, .project-link {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
-
 <body>
 
-    <section class="skills-section">
-        <h1> Skills</h1>
+    <div class="container">
 
-        <div class="skill">Basic Electrical Engineering Knowledge</div>
-     <div class="skill">Engineering Mathematics</div>
-        <div class="skill">Problem Solving</div>
-        <div class="skill">Teamwork & Communication</div>
-        <div class="skill">Basic Programming (C / HTML CSS)</div>
-        <div class="skill">Computer Skills (Word, Excel, PowerPoint)</div>
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h1>Skills</h1>
+            <div class="skill">Basic Electrical Engineering Knowledge</div>
+            <div class="skill">Engineering Mathematics</div>
+            <div class="skill">Problem Solving</div>
+            <div class="skill">Teamwork & Communication</div>
+            <div class="skill">Basic Programming (C / HTML CSS)</div>
+            <div class="skill">Computer Skills (Word, Excel, PowerPoint)</div>
+        </section>
 
-    </section>
-
-     <section class="project-section">
+        <!-- Projects Section -->
+        <section class="project-section">
             <h2>Projects</h2>
             <div class="project-link">
-                <a href="CFP C-Code Presentation.pptx" target="_blank">My PowerPoint Project</a>
+                <a href="presentation.pptx" target="_blank">My PowerPoint Project</a>
             </div>
         </section>
 
-
+    </div>
 
 </body>
-
 </html>
+
