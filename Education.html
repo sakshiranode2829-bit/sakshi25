@@ -2,94 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Education - Electrical Engineering Student</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fb;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Poppins", sans-serif;
         }
 
-        .education-section {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
+        body{
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+            min-height:100vh;
+            padding:40px 0;
         }
 
-        h1 {
-            text-align: center;
-            color: #222;
-            margin-bottom: 40px;
-            font-size: 2.3rem;
+        h1{
+            text-align:center;
+            font-size:3rem;
+            color:#fff;
+            margin-bottom:50px;
+            text-shadow:0 3px 10px rgba(0,0,0,0.3);
         }
 
-        .edu-card {
-            background: #ffffff;
-            padding: 20px 25px;
-            margin-bottom: 20px;
-            border-left: 6px solid #ff9900;
-            border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        .education-section{
+            max-width:950px;
+            margin:auto;
         }
 
-        .edu-card h2 {
-            color: #ff9900;
-            margin: 0 0 5px;
+        .edu-card{
+            background: rgba(255,255,255,0.14);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            transition:0.4s ease-in-out;
         }
 
-        .edu-card h3 {
-            margin: 0;
-            font-weight: normal;
-            color: #555;
+        .edu-card:hover{
+            transform: scale(1.03);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
         }
 
-        .edu-card p {
-            margin-top: 10px;
-            color: #555;
-            line-height: 1.6;
+        .edu-img img{
+            width:160px;
+            height:160px;
+            border-radius:12px;
+            object-fit:cover;
+            border:3px solid rgba(255,255,255,0.6);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .edu-content h2{
+            color:#fff;
+            font-size:1.6rem;
+            margin-bottom:5px;
+        }
+
+        .edu-content h3{
+            color:#e3e3e3;
+            font-weight:400;
+            margin-bottom:12px;
+        }
+
+        .edu-content p{
+            color:#f0f0f0;
+            line-height:1.6;
+            font-size:1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px){
+            .edu-card{
+                flex-direction:column;
+                text-align:center;
+            }
+            .edu-img img{
+                width:130px;
+                height:130px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <section class="education-section">
-        <h1> Education</h1>
+    <h1>My Education</h1>
 
-        <!-- University -->
+    <section class="education-section">
+
+        <!-- Engineering College -->
         <div class="edu-card">
-            <h2>Bachelor of Electrical Engineering (1st Year)</h2>
-            <h3>Sanjivani Collage of Engineering Kopargaon • 2024–Present</h3>
-            <p>
-                Currently studying core subjects such as basic electrical engineering, engineering 
-                mathematics, physics, and introductory programming. Gaining foundation knowledge 
-                in circuits, energy systems, and lab practicals.
-            <img src="eng collage.jpg">width=150 height=150</img>
-            </p>
+            <div class="edu-img">
+                <img src="eng collage.jpg" alt="Engineering College">
+            </div>
+            <div class="edu-content">
+                <h2>Bachelor of Electrical Engineering (1st Year)</h2>
+                <h3>Sanjivani College of Engineering, Kopargaon • 2024–Present</h3>
+                <p>
+                    Studying core engineering subjects including electrical circuits, engineering 
+                    mathematics, physics, and basic programming. Developing strong analytical and 
+                    practical skills through labs and projects.
+                </p>
+            </div>
         </div>
 
         <!-- High School -->
         <div class="edu-card">
-            <h2>High School (Science Stream)</h2>
-            <h3>Atma Malik Junior Collage Kokanmthan • 2022–2024</h3>
-            <p>
-                Completed high school with a strong focus on physics, mathematics, chemistry, 
-                and basic engineering concepts. Participated in science fairs and technical activities.
-              <img src="Atma malik junior collage.jpg">width=150 height=150</img>
-            </p>
+            <div class="edu-img">
+                <img src="Atma malik junior collage.jpg" alt="Junior College">
+            </div>
+            <div class="edu-content">
+                <h2>High School – Science Stream</h2>
+                <h3>Atma Malik Junior College, Kokamthan • 2022–2024</h3>
+                <p>
+                    Focused on PCM subjects and actively participated in science-related events, 
+                    building a strong foundation for engineering studies.
+                </p>
+            </div>
         </div>
 
-        <!-- Middle / Secondary School (Optional) -->
+        <!-- Secondary School -->
         <div class="edu-card">
-            <h2>Secondary School</h2>
-            <h3>Sanjivani English Medium School,Sahajanandanagar • 2013–2022</h3>
-            <p>
-                Built a foundation in mathematics and science. Participated in sports, school 
-                competitions, and other activities that developed teamwork and problem-solving skills.
-             <img src="Sanjivani school.jpg">width=150 height=150</img>
-            </p>
+            <div class="edu-img">
+                <img src="Sanjivani school.jpg" alt="School">
+            </div>
+            <div class="edu-content">
+                <h2>Secondary School</h2>
+                <h3>Sanjivani English Medium School, Sahajanandanagar • 2013–2022</h3>
+                <p>
+                    Developed discipline, communication, and leadership skills through participation 
+                    in sports, academic competitions, and group activities.
+                </p>
+            </div>
         </div>
 
     </section>
