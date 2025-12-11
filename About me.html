@@ -6,77 +6,113 @@
     <title>About Me</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Poppins",sans-serif;
         }
 
-        body {
-            background: #f3f3f3;
-            color: #333;
-            line-height: 1.6;
+        body{
+            background: linear-gradient(135deg, #dfe9f3, #ffffff);
+            color:#333;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .container{
+            max-width:950px;
+            margin:50px auto;
+            padding:30px;
+            background:#fff;
+            border-radius:20px;
+            box-shadow:0 8px 25px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease;
         }
 
-        .profile {
-            text-align: center;
-            margin-bottom: 30px;
+        @keyframes fadeIn{
+            from{opacity:0; transform: translateY(20px);}
+            to{opacity:1; transform: translateY(0);}
         }
 
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #4a90e2;
+        .profile{
+            text-align:center;
+            margin-bottom:40px;
         }
 
-        h1 {
-            margin-top: 15px;
-            font-size: 2.2rem;
-            color: #4a90e2;
+        .profile img{
+            width:170px;
+            height:170px;
+            border-radius:50%;
+            object-fit:cover;
+            border:5px solid #4a90e2;
+            box-shadow:0 5px 20px rgba(0,0,0,0.15);
+            transition:0.3s;
         }
 
-        h2 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: #4a90e2;
+        .profile img:hover{
+            transform: scale(1.05);
         }
 
-        p {
-            margin-bottom: 20px;
-            font-size: 1.05rem;
+        h1{
+            margin-top:20px;
+            font-size:2.5rem;
+            color:#4a90e2;
         }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+        .role{
+            font-size:1.1rem;
+            color:#555;
+            margin-top:5px;
         }
 
-        .skill {
-            background: #4a90e2;
-            color: #fff;
-            padding: 8px 14px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+        h2{
+            font-size:1.6rem;
+            margin-bottom:10px;
+            color:#4a90e2;
+            position:relative;
         }
 
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: #666;
+        h2::after{
+            content:"";
+            width:60px;
+            height:3px;
+            background:#4a90e2;
+            position:absolute;
+            bottom:-5px;
+            left:0;
+            border-radius:2px;
+        }
+
+        p{
+            font-size:1.1rem;
+            margin-bottom:20px;
+            line-height:1.7;
+        }
+
+        .resume-btn{
+            margin-top:10px;
+            background:#4a90e2;
+            color:#fff;
+            border:none;
+            padding:10px 18px;
+            font-size:1rem;
+            border-radius:25px;
+            cursor:pointer;
+            transition:0.3s;
+            box-shadow:0 4px 12px rgba(74,144,226,0.4);
+        }
+
+        .resume-btn:hover{
+            background:#3578c6;
+            transform: translateY(-2px);
+        }
+
+        footer{
+            text-align:center;
+            margin-top:40px;
+            padding-top:20px;
+            font-size:0.9rem;
+            color:#777;
+            border-top:1px solid #eee;
         }
     </style>
 </head>
@@ -84,32 +120,32 @@
 <body>
 
     <div class="container">
+
         <div class="profile">
             <img src="image.jpg" alt="Your Photo">
             <h1>SAKSHI RANODE</h1>
-            <p>STUDENT</p>
+            <p class="role">STUDENT</p>
         </div>
 
         <section>
             <h2>About Me</h2>
             <p>
-                Hi! I'm SAKSHI BABASAHEB RANODE, a student passionate about Electronics and devices.
-                I enjoy working on creative projects, learning new technologies, and improving my skills every day.
-              <a href="resume.pdf"download><button class ="resume-btn">Download Resume</button></a>
+                Hi! I'm <strong>SAKSHI BABASAHEB RANODE</strong>, a passionate student interested in 
+                <strong>Electronics, devices, and technology</strong>.  
+                I love learning, creating, and exploring new ideas to grow my skills every day.
+                <br><br>
+                <a href="resume.pdf" download>
+                    <button class="resume-btn">Download Resume</button>
+                </a>
             </p>
         </section>
-         
-        
-          
-
-        
 
         <footer>
-            © 2025 Your Name — All Rights Reserved
+            © 2025 Sakshi Ranode — All Rights Reserved
         </footer>
+
     </div>
 
 </body>
-
 </html>
 
